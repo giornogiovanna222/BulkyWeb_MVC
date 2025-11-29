@@ -1,0 +1,41 @@
+﻿@model Category
+
+<form method="post">
+	<div class="border border-5 rounded p-3 mt-4">
+		<div class="row pb-2">
+			<h2 class="text-primary">Edit Category</h2>
+			<hr style="height: 2px; background-color: #000000; border: none;" />
+		</div>
+		<div asp-validation-summary="All"></div> <!-- bunu eklersen hataların hepsini gösterir. -->
+		<div class="mb-3 row p-1">
+			<label asp-for="Name" class="p-0"></label> <!--asp-for kullanırsan label ismini de otomatik dolduruyor.-->
+			<input asp-for="Name" class="form-control" /> <!--form control text inputunu güzelleştiriyor.-->
+			<span asp-validation-for="Name" class="text-danger"></span>
+		</div>
+		<div class="mb-3 row p-1">
+			<!--bu dive p-1 verdik ki hafif boşluk olsun sol tarafla arasında. -->
+			<label asp-for="DisplayOrder" class="p-0"></label> <!--p0 yazarak sola yatırmış olduk yazıyı. padding 0-->
+			<input asp-for="DisplayOrder" class="form-control" /> <!--asp-for kullanırsan input typeı vermene gerek kalmaz. -->
+			<span asp-validation-for="DisplayOrder" class="text-danger"></span>
+		</div>
+		<div class="row">
+			<div class="col-6 col-md-3">
+				<button type="submit" class="btn btn-primary form-control">Update</button>
+			</div>
+			<div class="col-6 col-md-3">
+				<!--büyük 3 birim yer kaplasın diye col-md-3 yazdık. ekran küçükse yine 6 kaplıyor. -->
+				<a asp-controller="Category" asp-action="Index" class="btn btn-outline-secondary form-control border border-2">Back</a>
+			</div>
+		</div>
+	</div>
+</form>
+
+<!--bizim şimdiye kadar yaptığımız validationlar (yukarıdakiler) server side validationlardı.  -->
+<!-- eğer client side yapmak istiyorsan(customlar görünmez. built-in'ler görünür.)   -->
+<!-- hazırda olan bu dosyayı bu şekilde eklemen gerekiyor. -->
+<!-- böylece client sideda kontrol edebiliyoruz hatayı sayfayı yenilemeden(servera sormadan)-->
+@section Scripts {
+	@{
+		<partial name="_ValidationScriptsPartial" />
+	}
+}

@@ -1,0 +1,55 @@
+﻿@model List<Category>
+
+<!-- <partial name="_Notification"/> notification kısmını sharedda olan oluşturduk ve ekledik.-->
+<!-- bu şekilde tempdatayı her yere yazmak yerine böyle partial olarak ekleyebiliyoruz. -->
+<!--eğer projenin tamamına eklemek istiyosan _Layout kısmında RenderBodydden önce bu partialı koy.-->
+
+<div class="container">
+	<div class="row pt-4 pb-3">
+		<!--pt = padding top, pb = padding bottom-->
+		<div class="row col-6">
+			<!--bir rowda 12 yer varmış. 6 sına categorylist yazısını koyduk.-->
+			<h2 class="text-primary">
+				<!--siyah renk olsun diye text-primary-->
+				Category List
+			</h2>
+		</div>
+		<div class="row col-6 text-end">
+			<!--diğer 6 yı da kullandık col-6 ile ve text-end yaptık sonda dursun diye -->
+			<a asp-action="Create" asp-controller="Category" class="btn btn-primary">
+				<i class="bi bi-plus-circle"></i> Create New Category
+			</a>
+		</div>
+	</div>
+
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th>Category Name</th>
+				<th>Display Order</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var obj in Model.OrderBy(u => u.DisplayOrder))
+			{
+				<tr>
+					<td>@obj.Name</td>
+					<td>@obj.DisplayOrder</td>
+					<td>
+						<div class="w-75 btn-group" role="group">
+							<a asp-action="Edit" asp-route-id="@obj.Id" class="btn btn-primary mx-2">
+								<i class="bi bi-pencil-square"></i> Edit
+							</a>
+							<a asp-action="Delete" asp-route-id="@obj.Id" class="btn btn-danger mx-2">
+								<i class="bi bi-trash-fill"></i> Delete
+							</a>
+						</div>
+					</td>
+				</tr>
+			}
+		</tbody>
+
+
+
+	</table>
+</div>

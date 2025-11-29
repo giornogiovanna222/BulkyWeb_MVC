@@ -1,0 +1,49 @@
+﻿@model Category
+
+<div class="card shadow border-0 mt-4">
+	<div class="card-header bg-gradient ml-0 py-3 bg-primary">
+		<!--bg-primary çözdü renk sorununu -->
+		<div class="row">
+			<div class="col-12 text-center">
+				<h2 class="text-white py-2">Create Category</h2>
+			</div>
+		</div>
+	</div>
+	<div class="card-body p-4">
+		<form method="post" class="row">
+			<div class="p-3">
+				<div asp-validation-summary="All"></div> <!-- bunu eklersen hataların hepsini gösterir.mb-3 row p-1 vardı bir altta -->
+				<div class="form-floating py-2 col-12">
+					<input asp-for="Name" class="form-control border-0 shadow" /> <!--form control text inputunu güzelleştiriyor.-->
+					<label asp-for="Name" class="ms-2"></label> <!--asp-for kullanırsan label ismini de otomatik dolduruyor.-->
+					<span asp-validation-for="Name" class="text-danger"></span>
+				</div>
+				<div class="form-floating py-2 col-12">
+					<!--bu dive p-1 verdik ki hafif boşluk olsun sol tarafla arasında. -->
+					<input asp-for="DisplayOrder" class="form-control border-0 shadow" /> <!--asp-for kullanırsan input typeı vermene gerek kalmaz. -->
+					<label asp-for="DisplayOrder" class="ms-2"></label> <!--p0 yazarak sola yatırmış olduk yazıyı. padding 0-->
+					<span asp-validation-for="DisplayOrder" class="text-danger"></span>
+				</div>
+				<div class="row mt-3 pt-2">
+					<div class="col-6 col-md-3">
+						<button type="submit" class="btn btn-primary form-control">Create</button>
+					</div>
+					<div class="col-6 col-md-3">
+						<!--büyük 3 birim yer kaplasın diye col-md-3 yazdık. ekran küçükse yine 6 kaplıyor. -->
+						<a asp-controller="Category" asp-action="Index" class="btn btn-outline-primary form-control">Back</a>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+<!--bizim şimdiye kadar yaptığımız validationlar (yukarıdakiler) server side validationlardı.  -->
+<!-- eğer client side yapmak istiyorsan(customlar görünmez. built-in'ler görünür.)   -->
+<!-- hazırda olan bu dosyayı bu şekilde eklemen gerekiyor. -->
+<!-- böylece client sideda kontrol edebiliyoruz hatayı sayfayı yenilemeden(servera sormadan)-->
+@section Scripts {
+	@{
+		<partial name="_ValidationScriptsPartial" />
+	}
+}

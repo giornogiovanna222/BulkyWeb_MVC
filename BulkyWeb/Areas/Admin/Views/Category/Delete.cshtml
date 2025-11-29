@@ -1,0 +1,30 @@
+﻿@model Category
+
+<form method="post">
+	<div class="border border-5 rounded p-3 mt-4">
+		<div class="row pb-2">
+			<h2 class="text-primary">Delete Category</h2>
+			<hr style="height: 2px; background-color: #000000; border: none;" />
+		</div>
+		<div class="mb-3 row p-1">
+			<label asp-for="Name" class="p-0"></label> <!--asp-for kullanırsan label ismini de otomatik dolduruyor.-->
+			<input asp-for="Name" disabled class="form-control" /> <!--form control text inputunu güzelleştiriyor.-->
+		</div>
+		<div class="mb-3 row p-1">
+			<!--bu dive p-1 verdik ki hafif boşluk olsun sol tarafla arasında. -->
+			<label asp-for="DisplayOrder" class="p-0"></label> <!--p0 yazarak sola yatırmış olduk yazıyı. padding 0-->
+			<input asp-for="DisplayOrder" disabled class="form-control" /> <!--asp-for kullanırsan input typeı vermene gerek kalmaz. -->
+		</div>
+		<div class="row">
+			<div class="col-6 col-md-3">
+				<button type="submit" class="btn btn-danger form-control">Delete</button>
+			</div>
+			<div class="col-6 col-md-3">
+				<!--büyük 3 birim yer kaplasın diye col-md-3 yazdık. ekran küçükse yine 6 kaplıyor. -->
+				<a asp-controller="Category" asp-action="Index" class="btn btn-outline-secondary form-control border border-2">Back</a>
+			</div>
+		</div>
+	</div>
+</form>
+
+
