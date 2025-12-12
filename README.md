@@ -66,6 +66,12 @@ dotnet run
 📸 Screenshots
 <img width="1901" height="882" alt="ekrangörüntüsü" src="https://github.com/user-attachments/assets/b3c88adb-0cc6-4a1f-ae8e-554e59ad389f" />
 
+<img width="1901" height="881" alt="ekrangörüntüsü2" src="https://github.com/user-attachments/assets/cbfe0828-8bf5-472a-a5a8-2fdfb7a04d8b" />
+
+<img width="1920" height="885" alt="ekrangörüntüsü3" src="https://github.com/user-attachments/assets/1c2d2d44-d53e-41db-8a99-989a2a71af25" />
+
+
+
 
 
 
