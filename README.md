@@ -51,8 +51,9 @@ It demonstrates modern web development concepts, following **Clean Architecture 
 ## ⚙️ Installation & Setup
 
 1. Clone the repository:
-   ```bash
+```bash
    git clone https://github.com/giornogiovanna222/BulkyWeb_MVC.git
+```
 
 2. Navigate to the project folder:
 ```bash
