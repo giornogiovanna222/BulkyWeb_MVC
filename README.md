@@ -55,13 +55,19 @@ It demonstrates modern web development concepts, following **Clean Architecture 
    git clone https://github.com/giornogiovanna222/BulkyWeb_MVC.git
 
 2. Navigate to the project folder:
+```bash
 cd BulkyWeb_MVC
+```
 
 3. Update the database:
+```bash
 dotnet ef database update
+```
 
 4. Run the application:
+```bash
 dotnet run
+```
 
 📸 Screenshots
 <img width="1901" height="882" alt="ekrangörüntüsü" src="https://github.com/user-attachments/assets/b3c88adb-0cc6-4a1f-ae8e-554e59ad389f" />
