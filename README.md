@@ -5,7 +5,7 @@ It demonstrates modern web development concepts, following **Clean Architecture 
 
 ---
 
- 📖 Overview
+  Overview
 - Built with **.NET Core MVC - The Complete Guide 2025 [E-commerce]**
 - Implements **Clean Architecture** with clear separation of concerns
 - Designed for real-world online shopping scenarios
@@ -13,7 +13,7 @@ It demonstrates modern web development concepts, following **Clean Architecture 
 
 ---
 
- 🚀 Features
+  Features
 - Product catalog with categories
 - Shopping cart and checkout system
 - Order management
@@ -23,7 +23,7 @@ It demonstrates modern web development concepts, following **Clean Architecture 
 
 ---
 
- 🛠️ Tech Stack
+  Tech Stack
 - **ASP.NET Core MVC**
 - **Entity Framework Core**
 - **SQL Server**
@@ -32,7 +32,7 @@ It demonstrates modern web development concepts, following **Clean Architecture 
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 - **BulkyWeb**  
   Main ASP.NET Core MVC application. Contains controllers, views, and startup configuration.
@@ -48,7 +48,7 @@ It demonstrates modern web development concepts, following **Clean Architecture 
 
 ---
 
-## ⚙️ Installation & Setup
+##  Installation & Setup
 
 1. Clone the repository:
 ```bash
@@ -70,7 +70,7 @@ dotnet ef database update
 dotnet run
 ```
 
-📸 Screenshots
+ Screenshots
 <img width="1901" height="882" alt="ekrangörüntüsü" src="https://github.com/user-attachments/assets/b3c88adb-0cc6-4a1f-ae8e-554e59ad389f" />
 
 <img width="1901" height="881" alt="ekrangörüntüsü2" src="https://github.com/user-attachments/assets/cbfe0828-8bf5-472a-a5a8-2fdfb7a04d8b" />
